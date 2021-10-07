@@ -1,13 +1,20 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { pool } = require('./api/db/db.js');
+const pg = require('./api/db/db.js');
+const routes = require('./api/db/routes/routes.js');
+
+pg.authenticate()
+  .then(() => console.log('Connection success'))
+  .catch((e) => console.log(e.message))
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+
+routes(app);
 
 app.get('/', (req, res) => {
   res.status(200).send('Hello, World!');

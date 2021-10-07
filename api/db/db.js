@@ -1,12 +1,3 @@
-const Pool = require('pg').Pool;
+const { Sequelize } = require('sequelize');
 
-const connectionString = process.env.DB_STRING;
-
-const pool = new Pool({
-  connectionString,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
-
-module.exports = { pool };
+module.exports = new Sequelize(process.env.DB_STRING);
