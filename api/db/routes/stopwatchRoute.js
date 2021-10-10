@@ -7,4 +7,5 @@ module.exports = (app) => {
 
   app.route('/stopwatch/:id')
     .put(stopwatch.updateStopwatch)
+    .delete(stopwatch.deleteStopwatch)
 }

@@ -60,5 +60,17 @@ exports.updateStopwatch = async (req, res) => {
 }
 
 exports.deleteStopwatch = async (req, res) => {
-  console.log('Hello world');
+  const del_id = req.params.id;
+  try {
+    await Stopwatch.destroy({
+      where: {
+          id: del_id
+      }
+  })
+    res.status(200).send('Data deleted');
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+
+
 }
