@@ -49,9 +49,9 @@ This project still needs some improvements and we are still working on it. We ac
 
 Instead of frameworks, we are using pure Javascript (Vanilla Javascript). 
 We are using:
-* HTML
-* CSS
+* Sequelize
 * Vanilla JS
+* PostgreSQL
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -64,17 +64,20 @@ We are using:
     ```sh
     npm install .
     ```
-3. Start dev server
+3. Create a `.env` file on root folder containing:
+    - PORT (The database server run on port 3000 by default)
+    - DB_STRING (For connection to database)
+    
+4. Start dev server
     ```sh
-    npm run start-dev
-    ```
-    Open your web-browser and access localhost in 8080 port
-4. run 
+    npm run dev
+    ```    
+5. run the frontend app 
     ```sh
     npm run build
     ```
-5. the build will be in `/dist` folder.
-
+    
+`Our frontend app can be found here : https://github.com/WEBDEVPRKel6/K6-Timer-Javascript-Frontend` </br>
 You can do this in VSC or in your Command Prompt
 
 <!-- USAGE EXAMPLES -->
@@ -91,11 +94,8 @@ This application can help you calculate the amount of time to do your task, so y
 <!-- ROADMAP -->
 ## Roadmap
 - [x] Analyze the requirement
-- [x] Developing HTML and CSS
-- [x] Adding the Vanilla JS script
-- [x] Adding the Add button.
-- [x] Adding local storage.
-- [x] Fixing some bug.  
+- [x] Developing Model, Controller, and Route
+- [x] Connecting to PostgreSQL Database
 
 See the [open issues](https://github.com/WEBDEVPRKel6/K6-Timer-Javascript/issues) for a full list of proposed features (and known issues).
 
