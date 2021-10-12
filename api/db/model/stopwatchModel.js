@@ -1,24 +1,24 @@
-const { DataTypes } = require('sequelize');
-const db = require('../db.js');
+const { DataTypes } = require("sequelize");
+const db = require("../db.js");
 
-const Stopwatch = db.define('Stopwatch', {
+const Stopwatch = db.define("Stopwatch", {
   title: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
   },
   time: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: false,
   },
   date: {
     type: DataTypes.DATE,
-    allowNull: false
+    allowNull: false,
   },
   running: {
     type: DataTypes.BOOLEAN,
-    allowNull: false
-  }
+    allowNull: false,
+  },
 });
 
-Stopwatch.sync().then(() => console.log('Table created!'));
+Stopwatch.sync().then(() => console.log("Table created!"));
 
 module.exports = Stopwatch;
