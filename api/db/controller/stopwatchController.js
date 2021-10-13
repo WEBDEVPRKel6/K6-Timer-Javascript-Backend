@@ -15,13 +15,13 @@ exports.addStopwatch = async (req, res) => {
   const { title, time, date, running } = req.body;
 
   try {
-    const res = await Stopwatch.create({
+    const resData = await Stopwatch.create({
       title,
       time,
       date,
       running,
     });
-    res.status(201).json({ msg: "Data Created", response: res });
+    res.status(201).json({ msg: "Data Created", response: resData });
   } catch (error) {
     res.status(500).send(error.message);
   }
