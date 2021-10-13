@@ -58,7 +58,7 @@ We are using:
 
 1. Clone the repo
      ```sh
-	git clone https://github.com/WEBDEVPRKel6/K6-Timer-Javascript.git
+	git clone https://github.com/WEBDEVPRKel6/K6-Timer-Javascript-Backend.git
     ```
 2. Install all dependencies
     ```sh
