@@ -97,7 +97,7 @@ This application can help you calculate the amount of time to do your task, so y
 - [x] Developing Model, Controller, and Route
 - [x] Connecting to PostgreSQL Database
 
-See the [open issues](https://github.com/WEBDEVPRKel6/K6-Timer-Javascript/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/WEBDEVPRKel6/K6-Timer-Javascript-Backend/issues) for a full list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -119,7 +119,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/WEBDEVPRKel6/K6-Timer-Javascript.git]
+Project Link: [https://github.com/WEBDEVPRKel6/K6-Timer-Javascript-Backend.git]
 
 Project Group: K6-3B-WebDev'2021
 
