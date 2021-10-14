@@ -2,7 +2,11 @@ const Stopwatch = require("../model/stopwatchModel.js");
 
 exports.getStopwatches = async (req, res) => {
   try {
-    const result = await Stopwatch.findAll();
+    const result = await Stopwatch.findAll({
+      order: [
+        ['id', 'ASC'],
+    ]
+    });
     if (!result) res.status(404).send("Data not found");
 
     res.status(200).send(result);
