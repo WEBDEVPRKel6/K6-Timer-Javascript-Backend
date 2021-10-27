@@ -80,3 +80,39 @@ exports.deleteAllStopwatch = async (req, res) => {
     res.status(500).send(error.message);
   }
 };
+
+exports.resetAllStopwatch = async (req, res) => {
+  try {
+    await Stopwatch.update(
+      {
+        time: 0
+      },
+      {
+        where: {
+        },
+      }
+    );
+    res.status(200).send("Data updated");
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
+
+exports.resetStopwatch = async (req, res) => {
+  const id = req.params.id;
+  try {
+    await Stopwatch.update(
+      {
+        time: 0
+      },
+      {
+        where: {
+          id: id,
+        },
+      }
+    );
+    res.status(200).send("Data updated");
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
