@@ -2,7 +2,11 @@ const Stopwatch = require("../model/stopwatchModel.js");
 
 exports.getStopwatches = async (req, res) => {
   try {
-    const result = await Stopwatch.findAll();
+    const result = await Stopwatch.findAll({
+      order: [
+        ['id', 'ASC'],
+    ]
+    });
     if (!result) res.status(404).send("Data not found");
 
     res.status(200).send(result);
@@ -72,6 +76,23 @@ exports.deleteAllStopwatch = async (req, res) => {
       truncate: true,
     });
     res.status(200).send("All data deleted");
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+};
+
+exports.resetAllStopwatch = async (req, res) => {
+  try {
+    await Stopwatch.update(
+      {
+        time: 0
+      },
+      {
+        where: {
+        },
+      }
+    );
+    res.status(200).send("Data updated");
   } catch (error) {
     res.status(500).send(error.message);
   }

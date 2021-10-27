@@ -11,4 +11,6 @@ module.exports = (app) => {
   app.route("/stopwatch/delete/:id").delete(stopwatch.deleteStopwatch);
 
   app.route("/stopwatch/delete").delete(stopwatch.deleteAllStopwatch);
+
+  app.route("/stopwatch/reset").put(stopwatch.resetAllStopwatch);
 };
